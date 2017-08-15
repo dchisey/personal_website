@@ -23,6 +23,7 @@ heroImgs.forEach(element => {
     if(e.target.id == 'marketingSection') {
       heroMarketing.style.opacity = 0.25;
     } else if (e.target.id == 'codingSection') {
+
       heroCoding.style.opacity = 0.25;
     }
   }
@@ -34,22 +35,23 @@ function changeOpacity(event) {
   event.target.onmousemove = function(e) {
     var button = event.target.querySelector('button'),
         buttonX = button.offsetLeft,
-        buttonY = button.offsetTop + nav.clientHeight,
+        buttonY = 415,
         mouseX = e.clientX,
         mouseY = e.pageY,
-        distance = getDistance(buttonX, mouseX, buttonY, mouseY),
         section = e.target.id == 'marketingSection' || e.target.id == 'codingSection' ? e.target : e.target.parentNode,
         id = section.id,
+        distance = section.id == 'codingSection' ? getDistance(buttonX, mouseX - section.clientWidth, buttonY, mouseY) : getDistance(buttonX, mouseX, buttonY, mouseY),
         height = section.clientHeight;
 
+        console.log([section]);
         console.log([button]);
-        console.log(buttonX, buttonY, '|', mouseX, mouseY)
-    if(id == 'marketingSection' || heroMarketing.style.opacity >= .25 ) {
-      console.log(height);
+        console.log(buttonX, buttonY, '|', mouseX, mouseY);
+    if(id == 'marketingSection') {
+      console.log(section);
       heroMarketing.style.opacity = (distance / height - 1) * -1;
     } else if (id == 'codingSection'){
-      console.log(height);
-      heroCoding.style.opacity = (distance / height - 1) * - 1;
+      heroCoding.style.opacity = (distance / height - 1) * -1;
+
     }
 
   }
