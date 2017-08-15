@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:300|Exo:200');
+
+
+:root {
+main-bg: #F9F9FA;
+main-text: #1D5D70;
+}
+
+div.break {
+  display:block;
+  background-color: gray;
+  height: 10px;
+  width:100%;
+}
+
+body {
+  margin:0;
+  background-color: var(--main-bg);
+  color: var(--secondary-bg);
+  font-family: 'Exo', sans-serif;
+  font-weight: 100;
+}
+
+nav {
+  margin:0;
+  position:relative;
+  width: 100%;
+  height: 70px;
+  background: #E55D87;  /* fallback for old browsers */
+  background:webkit-linear-gradient(to left, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+ul {
+  position:relative;
+}
+
+nav ul li {
+  top:50%;
+  display: inline-block;
+  list-style-type: none;
+  background-color:red;
+}
