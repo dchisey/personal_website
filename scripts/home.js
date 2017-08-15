@@ -1,4 +1,4 @@
--var heroMarketing = document.querySelector('#marketing'),
+var heroMarketing = document.querySelector('#marketing'),
     heroCoding = document.querySelector('#coding'),
     heroImgs = document.querySelectorAll('main>section'),
     nav = document.querySelector('nav'),
@@ -7,8 +7,8 @@
 console.log([heroMarketing]);
 
 function getDistance(x1, x2, y1, y2) {
-  var xs = x2 x1,
-      ys = y2 y1;
+  var xs = x2 - x1,
+      ys = y2 - y1;
 
   xs *= xs;
   ys *= ys;
@@ -46,10 +46,10 @@ function changeOpacity(event) {
         console.log(buttonX, buttonY, '|', mouseX, mouseY)
     if(id == 'marketingSection' || heroMarketing.style.opacity >= .25 ) {
       console.log(height);
-      heroMarketing.style.opacity = (distance / height 1) *1;
+      heroMarketing.style.opacity = (distance / height - 1) * -1;
     } else if (id == 'codingSection'){
       console.log(height);
-      heroCoding.style.opacity = (distance / height 1) *1;
+      heroCoding.style.opacity = (distance / height - 1) * - 1;
     }
 
   }
