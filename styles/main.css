@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Exo:300|Exo:200');
+@import url('https://fonts.googleapis.com/css?family=Exo:300|Exo:200|Cinzel+Decorative');
 
 
 :root {
-main-bg: #F9F9FA;
+main-bg: #EFEFEF;
+secondary-bg: #F2F2F2;
 main-text: #1D5D70;
 }
 
@@ -13,13 +14,18 @@ div.break {
   width:100%;
 }
 
+/*--------UNIVERSAL COLORS--------*/
+
 body {
   margin: 0;
   background-color: var(--main-bg);
-  color: var(--secondary-bg);
+  color: var(--main-text);
   font-family: 'Exo', sans-serif;
   font-weight: 100;
 }
+
+
+/*--------NAV--------*/
 
 nav {
   position: relative;
@@ -33,8 +39,9 @@ nav {
 nav > ul {
   display: flex;
   align-items: center;
+  justify-content: space-around;
   margin: 0;
-  height: 100%
+  height: 100%;
 }
 
 nav ul li {
@@ -43,4 +50,17 @@ nav ul li {
   display: inline-block;
   font-size: 15px;
   list-style-type: none;
+}
+
+#logo {
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 36px;
+}
+
+.firstLetter {
+  font-size: 45px;
+}
+
+.reset {
+  font-family: 'Times New Roman', serif;
 }
