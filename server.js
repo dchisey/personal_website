@@ -5,7 +5,8 @@ var express = require('express'),
 	Contact = require('./app/model/model'),
 	app = express(),
 	bodyParser = require('body-parser'),
-	routes = require('./app/routes/routes');
+	routes = require('./app/routes/routes'),
+	port = process.env.PORT || 3000;
 
 //configure body-parser
 app.use(bodyParser.urlencoded({extended: true}));
@@ -22,6 +23,6 @@ app.use(routes);
 // mongo.connect('mongodb://localhost')
 
 
-app.listen(3000, function(req, res) {
-	console.log('Server listening on port 3000.');
+app.listen(port, function(req, res) {
+	console.log('Server listening on port ' + port);
 })
