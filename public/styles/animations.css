@@ -1,0 +1,58 @@
+@keyframes growVerticalLine {
+  from { height: 0px; }
+  to { height: 350px; }
+}
+
+@keyframes shrinkVerticalLine {
+  from { height: 350px; }
+  to { height: 0px; }
+}
+
+@keyframes growHorizontalLine {
+  from { width: 0px; }
+  to { width: 400px; };
+}
+
+@keyframes shrinkHorizontalLine {
+  from { width: 400px; height: 10px; }
+  to { width: 0px; height: 1px };
+}
+
+.downwardVerticalLine {
+  position: absolute;
+  background: #E55D87;  /* fallback for old browsers */
+  background:webkit-linear-gradient(to top, #5FC3E4, #E55D87);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #5FC3E4, #E55D87); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 10px;
+  height: 0px;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rightwardHorizontalLine {
+  position: absolute;
+  background: #5FC3E4;
+  width: 0px;
+  height: 10px;
+  top: 235%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
+.growVL {
+  animation: 1.25s growVerticalLine ease-in-out forwards;
+}
+
+.growHL {
+  animation: 1.25s growHorizontalLine ease-in-out forwards; 
+}
+
+.shrinkVL {
+  animation: 1.25s shrinkVerticalLine ease-in-out forwards;
+}
+
+.shrinkHL {
+  animation: 1.25s shrinkHorizontalLine ease-in-out forwards; 
+}
+

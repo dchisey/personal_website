@@ -1,0 +1,26 @@
+{
+  "name": "dans_site",
+  "version": "1.0.0",
+  "description": "Dan Hisey's professional website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dchisey/personal_website.git"
+  },
+  "author": "Dan Hisey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dchisey/personal_website/issues"
+  },
+  "homepage": "https://github.com/dchisey/personal_website#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.12.0",
+    "nodemailer": "^4.1.2"
+  }
+}

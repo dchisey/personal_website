@@ -1,0 +1,438 @@
+/*-------------------------------------
+              MODULES
+-------------------------------------*/
+
+/*--------HERO--------*/
+main > section {
+  padding: 0px 100px;
+  height: 500px;
+  word-wrap: break-word;
+  overflow: visible;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background: url(../images/marketing_opaque.jpeg) no-repeat center center;
+  background-size: cover;
+}
+
+main > section > div {
+  padding: 0px 100px;
+  width: 50%;
+}
+
+main > section h2 {
+  font-size: 65px;
+}
+
+#dan {
+  height: 500px;
+  width: 500px;
+}
+
+
+
+/*--------STORY MODULES--------*/
+#storyContainer {
+  background: linear-gradient(to bottom, #FFF, #c0ebf9);
+}
+
+
+section > section {
+  padding: 0px 100px;
+  height: 625px;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+section > section > div {
+  margin: 0px 100px;
+}
+
+section > section h2 {
+  font-size: 65px;
+}
+
+
+
+.textNode {
+  flex-grow: 3;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid black;
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Exo', sans-serif;
+}
+
+/*IMAGES*/
+#graph {
+  height: 250px;
+  width: 250px;
+}
+
+
+/*--------CONTACT ME--------*/
+
+#contactContainer {
+  height: 600px;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #b70139;
+  color: white;
+}
+
+#contactContainer h2 {
+  padding-top: 40px;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+
+}
+
+form select {
+  text-align: center;
+}
+
+form input {
+  width: 80%;
+  height: 30px;
+  margin: 5px 0px;
+  font-family: 'Exo', sans-serif;
+}
+
+form textarea {
+  font-family: 'Exo', sans-serif;
+  padding-top: 8px;
+}
+
+.name {
+  width: 39%;
+}
+
+form input[name="firstName"] {
+  margin-right: 0.4%;
+  margin-left: 0%;
+}
+
+form input[name="lastName"] {
+  margin-left: 0.4%;
+  margin-right: 0%;
+}
+
+form textarea {
+  width: 80%;
+  height: 200px;
+  margin-top: 5px;
+}
+
+form button {
+  width: 80%;
+}
+
+
+/*--------CAROUSEL--------*/
+
+#carousel {
+  position: relative;
+  list-style-type: none;
+  height: 625px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.slide .left {
+  padding: 0px 100px 0px 250px;
+}
+
+.slide .right {
+  padding: 0px 250px 0px 100px;
+}
+
+
+
+
+.showing {
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 1s;
+}
+
+.slideNavigator {
+  position: absolute;
+  font-size: 40px;
+  height: 65px;
+  width: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  z-index: 3;
+}
+
+#previous {
+  left: 5%;
+}
+
+#next {
+  right: 5%;
+}
+
+#carousel h1 {
+  font-size: 2em;
+  font-family: 'Exo', sans-serif;
+  position:absolute;
+  font-weight: bold;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#dotNavigator {
+  padding: 0px;
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.dot {
+  margin: 0px 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  transition: width 0.5s, height 0.5s, transform 0.7s;
+}
+
+.selected {
+  width: 15px;
+  height: 15px;
+  transform: translateY(15%);
+  transition: width 0.5s, height 0.5s, transform 0.7s;
+}
+
+
+/*BREAKPOINTS*/
+
+@media only screen and (max-width: 1415px) {
+  .slide .left {
+    padding: 0px 35px 0px 125px;
+  }
+
+  .slide .right {
+    padding: 0px 125px 0px 35px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  main {
+    height: 450px;
+  }
+
+  main > section {
+    padding: 0px 10px;
+    height: 100%;
+  }
+
+  main > section > div {
+    justify-content: space-between;
+    padding: 0px;
+  }
+
+  #dan {
+    width: 400px;
+    height: 400px;
+    align-self: flex-end;
+  }
+
+  .slide {
+    flex-wrap: wrap;
+  }
+
+  .slide .left {
+    padding: 10px 100px;
+    align-self: center;
+  }
+
+  .slide .right {
+    padding: 10px 100px;
+  }
+
+  #carousel img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #carousel h1 {
+    display: none;
+  }
+
+  #dotNavigator {
+    bottom: 0.5%;
+  }
+
+}
+
+
+@media screen and (max-width: 1258px) {
+  main > section {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 1038px) {
+  main > section > div {
+    margin: 0px 20px;
+  }
+
+  section > section {
+    padding: 0px 20px;
+  }
+
+  section > section > div {
+    margin: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 777px) {
+  main {
+    height: 500px;
+    width: 100%;
+    margin: 0;
+  }
+
+  main > section {
+    display: block;
+    text-align: center;
+    height: 100%;
+  }
+
+  main > section > div {
+    display: block;
+    margin: auto;
+    text-align: center;
+    height: 50%;
+    width: 80%;
+  }
+
+  main > section h2 {
+    margin: 0;
+    padding-top: 75px;
+    font-size: 9vw;
+  }
+
+  #dan {
+    display: block;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+  }
+
+  .slide .right {
+    padding: 0;
+    width: 55%;
+  }
+
+  #graph {
+    width: 200px;
+    height: 200px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+    
+  #slideContent ul {
+    padding: 0% 19%;
+  }
+
+  #slideContent li {
+    padding-bottom: 10px;
+    list-style-type: none;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  section > section {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  #codeIcon {
+    order: 1;
+    width: 150px;
+    height: 150px;
+    padding-bottom: 50px;
+  }
+
+  #codingDescription {
+    order: 2;
+  }
+
+  #codingDescription > button {
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width: 525px) {
+  #carousel {
+    height: 700px;
+  }
+
+  #carousel img {
+    width: 100px;
+    height: 100px;
+  }
+
+  section > section {
+    height: 725px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #carousel #graph {
+    width: 175px;
+    height: 175px;
+  }
+}
