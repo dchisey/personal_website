@@ -52,3 +52,22 @@ nav ul li {
   font-size: 30px;
   font-weight: bold;
 }
+
+nav ul li a: {
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  display: inline-block;
+  font-size: 15px;
+  list-style-type: none;
+}
+
+nav ul li a {
+    color: #303a3d;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+     color: #0b0e0f; 
+     text-decoration:none; 
+     cursor:pointer;  
+}

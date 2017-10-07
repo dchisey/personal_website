@@ -225,12 +225,12 @@ var form = document.querySelector('form');
 form.addEventListener('submit', e => {
   e.preventDefault();
   var formData = sortFormData(form);
-
-  console.log(formData)
   var request = new XMLHttpRequest()
   request.open('POST', './formSubmission', true);
   request.setRequestHeader('Content-type', 'application/json');
   request.send(formData);
+
+  alert("Thanks for sending! I'll be in contact soon.")
 
 });
 
