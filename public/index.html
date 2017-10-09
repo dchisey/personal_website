@@ -25,32 +25,17 @@
     </nav>
   </header>
 
-<!--   <main>
-      <h1>Dan Hisey</h1>
-
-      <section id="marketingSection">
-        <h1>Performance Marketing</h1>
-        <button>Get Results</button>
-      </section>
-
-      <section id="codingSection">
-        <h1>Web Development</h1>
-        <button>Develop Your Site</button>
-      </section>
-      <div id="marketing"></div>
-      <div id="coding"></div>
-  </main> -->
   <main>
     <section> 
       <div class="textNode">
-      <!-- <div class="downwardVerticalLine" data-line="true" data-index="1"></div>
-      <div class="rightwardHorizontalLine" data-line="true" data-index="1"></div> -->
+      
         <h2>Hi. I'm Dan.</h2>
         <h3>I'm a professional performance marketer and amateur web developer based in Chicago.</h3>
       </div>
       <img src="images/dan.png" alt="Dan smiling." id="dan">
     </section>
   </main>
+
   <section id="storyContainer"><a id="experience"></a>
     <section id="carousel">
       <h1>Professional Experience</h1>
@@ -58,21 +43,16 @@
         <li class="slide showing">
           <div class="left"><img src="images/graph_black.png" alt="Graph trending up" id="graph"></div>
           <div class="right">
-            <!-- <div class="downwardVerticalLine" data-line="true" data-index="2"></div>
-            <div class="rightwardHorizontalLine" data-line="true" data-index="2"></div> -->
-
+          
             <h3>I have 6 years experience in performance marketing</h3>
             <p>I specialize in high-growth environments, managing both the strategy and execution of paid media programs. I excel at finding areas of growth, forecasting spend and lead volume, and planning for both the long and short-term future.</p>
-            <!-- <button>Experience</button> -->
+            
 
           </div>
         </li>
         <li class="slide">
           <div class="left"><img src="images/wyzant_logo.png" alt="Wyzant logo" id="wyzant"></div>
           <div class="textNode right">
-            <!-- <div class="downwardVerticalLine" data-line="true" data-index="2"></div>
-            <div class="rightwardHorizontalLine" data-line="true" data-index="2"></div> -->
-
             <h3>SEM Manager</h3>
             <ul>
               <li>By adding structure and process to the management of the account, I was able to improve lead volume 40% year-over-year.</li>
@@ -86,9 +66,6 @@
         <li class="slide">
           <div class="left"><img src="images/centro_logo.png" alt="Centro logo" id="centro"></div>
           <div class="textNode right">
-            <!-- <div class="downwardVerticalLine" data-line="true" data-index="2"></div>
-            <div class="rightwardHorizontalLine" data-line="true" data-index="2"></div> -->
-
             <h3>Senior Paid Search Strategist</h3>
             <ul>
               <li>Acted as point person on new business to create and present strategies pre-sale, then executing, reporting and optimizing post-sale.</li>
@@ -114,27 +91,10 @@
       
     
     </section>
-<!--     <section>
-      
-        <div><img src="images/graph_black.png" alt="Graph trending up" id="graph" class="verticallyAlign"></div>
-        <div class="textNode"> -->
-          <!-- <div class="downwardVerticalLine" data-line="true" data-index="2"></div>
-          <div class="rightwardHorizontalLine" data-line="true" data-index="2"></div> -->
 
-<!--           <h3>I have 6 years experience in performance marketing</h3>
-          <p>I specialize in high-growth environments, managing both the strategy and execution of paid media programs. I excel at finding areas of growth, forecasting spend and lead volume, and planning for both the long and short-term future.</p>
-          <button id="test">Experience</button>
-        </div>
-      
-      
-      
-    
-    </section> -->
     <a id="projects"></a>
     <section class="module">
       <div id="codingDescription">
-        <!-- <div class="downwardVerticalLine" data-line="true" data-index="3"></div>
-        <div class="rightwardHorizontalLine" data-line="true" data-index="3"></div> -->
         <h3>Intermediate knowledge of HTML, CSS and JavaScript</h3>
         <p>Web development is a recent hobby of mine; I've been learning since January 2017. Using this skill, I've not only been able to learn to build a webpage (this one is built from scratch), but I've also created tools to automate business processes. These include an ad creation tool, a content analyzer using natural language processing and automated reporting using AdWords Scripts.</p>
         <button>Coming Soon!</button>
@@ -144,22 +104,28 @@
   </section>
 
 
-  <section id="contactContainer"><a id="contact"></a>
-    <h2>Contact Me</h2>
-    <form action="/formSubmission" method="post">
-      <label for="reason">Reason for reaching out:</label>
-      <select name="reason">
-        <option value="Marketing">Marketing</option>
-        <option value="Web Development">Web Development</option>
-        <option value="other">Other</option>
-      </select><br>
-      <input type="text" name="firstName" placeholder="First Name" class="name" required>
-      <input type="text" name="lastName" placeholder="Last Name" class="name" required><br>
-      <input type="text" name="company" placeholder="Company" required><br>
-      <input type="text" name="email" placeholder="Email Address" required><br>
-      <textarea name="message" placeholder="Let me know what you're looking for."></textarea>
-      <input type="submit">
-    </form>
+  <section id="contactContainer">
+    <section id="form"><a id="contact"></a>
+      <h2>Contact Me</h2>
+      <form action="/formSubmission" method="post">
+        <label for="reason">Reason for reaching out:</label>
+        <select name="reason">
+          <option value="Marketing">Marketing</option>
+          <option value="Web Development">Web Development</option>
+          <option value="other">Other</option>
+        </select><br>
+        <input type="text" name="firstName" placeholder="First Name" class="name" required>
+        <input type="text" name="lastName" placeholder="Last Name" class="name" required><br>
+        <input type="text" name="company" placeholder="Company" required><br>
+        <input type="text" name="email" placeholder="Email Address" required><br>
+        <textarea name="message" placeholder="Let me know what you're looking for."></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
+
+    <section id="confirmation">
+      <h2>Thanks for sending! I'll be in touch shortly.</h2>
+    </section>
   </section>
 
 <script src="scripts/home.js"></script>
