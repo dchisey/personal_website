@@ -133,7 +133,7 @@ button {
 form {
   margin: auto;
   width: 50%;
-
+  -webkit-appearance: none;
 }
 
 form select {
