@@ -138,6 +138,7 @@ form {
 
 form select {
   text-align: center;
+  -webkit-appearance: none;
 }
 
 form input {
@@ -145,11 +146,16 @@ form input {
   height: 30px;
   margin: 5px 0px;
   font-family: 'Exo', sans-serif;
+  -webkit-appearance: none;
 }
 
 form textarea {
   font-family: 'Exo', sans-serif;
   padding-top: 8px;
+  -webkit-appearance: none;
+  width: 80%;
+  height: 200px;
+  margin-top: 5px;
 }
 
 .name {
@@ -166,14 +172,9 @@ form input[name="lastName"] {
   margin-right: 0%;
 }
 
-form textarea {
-  width: 80%;
-  height: 200px;
-  margin-top: 5px;
-}
-
 form button {
   width: 80%;
+  -webkit-appearance: none;
 }
 
 
