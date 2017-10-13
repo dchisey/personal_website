@@ -128,14 +128,6 @@ button {
   z-index: 0;  
 }
 
-textarea,
-input[type="text"],
-input[type="button"],
-input[type="submit"] {
-  -webkit-appearance: none;
-  border: 1px;
-  border-radius: 0;
-}
 
 form {
   margin: 0 auto;
@@ -156,6 +148,8 @@ form input {
   margin: 5px 0px;
   font-family: 'Exo', sans-serif;
   box-sizing: border-box;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 form textarea {
@@ -165,11 +159,15 @@ form textarea {
   height: 200px;
   margin-top: 5px;
   box-sizing: border-box;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 .name {
   display: inline-block;
   width: 49.3%;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 form input[name="firstName"] {
