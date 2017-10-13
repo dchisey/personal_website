@@ -5,6 +5,7 @@
 //*******CAROUSEL*******
 
 const slides = document.querySelectorAll('.slide');
+const numSlides = slides.length;
 const buttons = document.querySelectorAll('.slideNavigator');
 const dots = document.querySelectorAll('.dot');
 var currentSlide = 0,
@@ -24,14 +25,13 @@ function changeSlide(e) {
   var slideMovement = calculateSlideChange(e),
       slideDifference = +currentSlide + slideMovement;
   
-  console.log(slideDifference)
   slides[currentSlide].classList = 'slide';
   if(slideDifference < 0) {
     previousSlide = currentSlide;
-    currentSlide = 3 + slideDifference;
+    currentSlide = numSlides + slideDifference;
   } else {
     previousSlide = currentSlide;
-    currentSlide = slideDifference % 3;
+    currentSlide = slideDifference % numSlides;
   }
 
   slides[currentSlide].classList = 'slide showing';
@@ -52,7 +52,7 @@ function changeDot(e) {
     dots[previousSlide].classList = 'dot';
     currentSlide = newSlide;
   }
-  console.log(currentSlide)
+
   dots[currentSlide].classList = 'dot selected';
 }
 
@@ -69,11 +69,9 @@ function calculateSlideChange(e) {
   var slideChange, target;
 
   if(arrowIsTarget(e)) {
-    console.log('Arrow is the target.');
     target = e.target.id
     slideChange = target == 'next' ? 1 : -1;
   } else {
-    console.log('Arrow is not the target.');
     target = dots[dotIndex(e)];
 
     var newSlide = +target.dataset.order;
@@ -96,7 +94,7 @@ var form = document.querySelector('form'),
     confirmation = document.querySelector('#confirmation h2'),
     formSection = document.querySelector('#form');
 
-form.addEventListener('submit', e => {
+addMultipleELs(form, 'submit touchend', e => {
   e.preventDefault();
   var formData = sortFormData(form);
   var request = new XMLHttpRequest()
@@ -142,3 +140,18 @@ HTMLElement.prototype.appear = function() {
   
   this.classList.add('submitted');
 }
+
+//Helper function
+function addMultipleELs(element, events, callback) {
+  var events = events.split(' ');
+  for(var i = 0; i < events.length; i++) {
+    element.addEventListener(events[i], callback);
+  }
+}
+
+var firstName = document.querySelector('form input[name="firstName"]');
+var lastName = document.querySelector('form input[name="lastName"]');
+var input = document.querySelector('form input:nth-child(3n)');
+var textarea = document.querySelector('form textarea');
+
+console.log(firstName.offsetWidth, lastName.offsetWidth, input.offsetWidth, textarea.offsetWidth, form.offsetWidth);

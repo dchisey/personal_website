@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/home_desktop.css">
+  <link rel="stylesheet" href="styles/home.css">
   <link rel="stylesheet" href="styles/animations.css">
 
   <title>Dan Hisey</title>
@@ -40,6 +40,7 @@
     <section id="carousel">
       <h1>Professional Experience</h1>
       <ul id="slideContent">
+       
         <li class="slide showing">
           <div class="left"><img src="images/graph_black.png" alt="Graph trending up" id="graph"></div>
           <div class="right">
@@ -50,6 +51,19 @@
 
           </div>
         </li>
+        <li class="slide">
+          <div class="left"><img src="images/mindshare_logo.png" alt="Mindshare logo" id="mindshare"></div>
+          <div class="textNode right">
+            <h3>Associate Director, Paid Search</h3>
+            <ul>
+              <li>Conducted annual planning for Kimberly-Clark paid search, including budgets, goal setting and strategy.</li>
+              <li>Managed a large team of managers and associates to ensure all tasks were completed on-time and with quality.</li>
+              <li>Worked with client on business goals and developed paid search strategies to achieve them.</li>
+              <li>Drove Amazon campaign creation for CPG direct sales, using Kenshoo as a management software for data collection and reporting</li>
+            </ul>
+
+          </div>
+        </li>         
         <li class="slide">
           <div class="left"><img src="images/wyzant_logo.png" alt="Wyzant logo" id="wyzant"></div>
           <div class="textNode right">
@@ -81,8 +95,8 @@
         <li data-order="0" class="dot selected"></li>
         <li data-order="1" class="dot"></li>
         <li data-order="2" class="dot"></li>
-<!--         <li data-order="3" class="dot"></li>
-        <li data-order="4" class="dot"></li> -->
+        <li data-order="3" class="dot"></li>
+<!--         <li data-order="4" class="dot"></li> -->
       </ul>
       <button class="slideNavigator" id="previous">&#9001</button>
       <button class="slideNavigator" id="next">&#9002</button>
@@ -114,8 +128,10 @@
           <option value="Web Development">Web Development</option>
           <option value="other">Other</option>
         </select><br>
-        <input type="text" name="firstName" placeholder="First Name" class="name" required>
-        <input type="text" name="lastName" placeholder="Last Name" class="name" required><br>
+        <div id="nameFlex">
+          <input type="text" name="firstName" placeholder="First Name" class="name" required>
+          <input type="text" name="lastName" placeholder="Last Name" class="name" required>
+        </div><br>
         <input type="text" name="company" placeholder="Company" required><br>
         <input type="text" name="email" placeholder="Email Address" required><br>
         <textarea name="message" placeholder="Let me know what you're looking for."></textarea>

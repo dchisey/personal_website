@@ -111,8 +111,6 @@ button {
   z-index: 1;
 }
 
-
-
 #confirmation {
   position: absolute;
   padding: 0;
@@ -130,32 +128,47 @@ button {
   z-index: 0;  
 }
 
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 form {
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
+  border-radius: 0;
+  border-width: 0;
 }
 
 form select {
   text-align: center;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 form input {
-  width: 80%;
+  width: 100%;
   height: 30px;
   margin: 5px 0px;
   font-family: 'Exo', sans-serif;
+  box-sizing: border-box;
 }
 
 form textarea {
   font-family: 'Exo', sans-serif;
   padding-top: 8px;
-  width: 80%;
+  width: 100%;
   height: 200px;
   margin-top: 5px;
+  box-sizing: border-box;
 }
 
 .name {
-  width: 39%;
+  display: inline-block;
+  width: 50%;
 }
 
 form input[name="firstName"] {
@@ -169,7 +182,7 @@ form input[name="lastName"] {
 }
 
 form button {
-  width: 80%;
+  width: 100%;
 }
 
 
@@ -226,10 +239,12 @@ form button {
 
 #previous {
   left: 5%;
+  text-align: left;
 }
 
 #next {
   right: 5%;
+  text-align: right;
 }
 
 #carousel h1 {
@@ -435,7 +450,7 @@ form button {
   }
 
   form {
-    width: 80%;
+    width: 60%;
   }
 
 }
@@ -456,7 +471,7 @@ form button {
   }
 
   form {
-    width: 100%;
+    width: 90%;
   }
 
   p {

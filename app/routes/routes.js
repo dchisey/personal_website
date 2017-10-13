@@ -4,7 +4,7 @@ var express = require('express'),
  	controller = require('../controller/controller');
 
 router.get('/', (req, res) => {
-	res.send()
+	res.send(res.statusCode);
 })
 
 router.post('/formSubmission', controller.send_email_on_submission);
