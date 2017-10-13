@@ -181,8 +181,11 @@ form input[name="lastName"]:after {
   content: '';
 }
 
-form button {
+form input[name="submit"] {
   width: 100%;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
 
