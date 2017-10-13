@@ -133,6 +133,7 @@ input[type="text"],
 input[type="button"],
 input[type="submit"] {
   -webkit-appearance: none;
+  border: 1px;
   border-radius: 0;
 }
 
@@ -168,7 +169,7 @@ form textarea {
 
 .name {
   display: inline-block;
-  width: 50%;
+  width: 49.3%;
 }
 
 form input[name="firstName"] {
@@ -483,3 +484,10 @@ form button {
     height: 175px;
   }
 }
+
+@media screen and (max-width: 367px) {
+  .name {
+    width:100%;
+  }
+
+}  
