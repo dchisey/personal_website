@@ -91,21 +91,12 @@ codingButton.addEventListener('click', e => {alert('Not yet!')});
 
 //Form handling
 var form = document.querySelector('form'),
+    button = document.querySelector('form input[type="submit"]'),
     confirmation = document.querySelector('#confirmation h2'),
     formSection = document.querySelector('#form');
 
-addMultipleELs(form, 'submit touchend', e => {
-  e.preventDefault();
-  var formData = sortFormData(form);
-  var request = new XMLHttpRequest()
-  request.open('POST', './formSubmission', true);
-  request.setRequestHeader('Content-type', 'application/json');
-  request.send(formData);
-
-  formSection.makeTransparent();
-  confirmation.appear();
-
-});
+form.addEventListener('submit', submit);
+button.addEventListener('touchend', submit);
 
 function sortFormData(form) {
   var parsedForm = {},
@@ -142,16 +133,15 @@ HTMLElement.prototype.appear = function() {
 }
 
 //Helper function
-function addMultipleELs(element, events, callback) {
-  var events = events.split(' ');
-  for(var i = 0; i < events.length; i++) {
-    element.addEventListener(events[i], callback);
-  }
+
+function submit(e) {
+  e.preventDefault();
+  var formData = sortFormData(form);
+  var request = new XMLHttpRequest()
+  request.open('POST', './formSubmission', true);
+  request.setRequestHeader('Content-type', 'application/json');
+  request.send(formData);
+
+  formSection.makeTransparent();
+  confirmation.appear();
 }
-
-var firstName = document.querySelector('form input[name="firstName"]');
-var lastName = document.querySelector('form input[name="lastName"]');
-var input = document.querySelector('form input:nth-child(3n)');
-var textarea = document.querySelector('form textarea');
-
-console.log(firstName.offsetWidth, lastName.offsetWidth, input.offsetWidth, textarea.offsetWidth, form.offsetWidth);

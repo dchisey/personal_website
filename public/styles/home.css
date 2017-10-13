@@ -164,20 +164,21 @@ form textarea {
 }
 
 .name {
-  display: inline-block;
-  width: 49.3%;
+  width: 49.1%;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-form input[name="firstName"] {
-  margin-right: 0.4%;
-  margin-left: 0%;
+form input[name="firstName"]:before {
+  width: 100%;
+  display: block;
+  content: '';
 }
 
-form input[name="lastName"] {
-  margin-left: 0.4%;
-  margin-right: 0%;
+form input[name="lastName"]:after {
+  display: inline-block;
+  width: 100%;
+  content: '';
 }
 
 form button {
@@ -454,6 +455,12 @@ form button {
 
 }
 
+
+@media screen and (max-width: 541px) {
+  .name {
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 525px) {
   #carousel {
