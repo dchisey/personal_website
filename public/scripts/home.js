@@ -91,12 +91,14 @@ codingButton.addEventListener('click', e => {alert('Not yet!')});
 
 //Form handling
 var form = document.querySelector('form'),
-    button = document.querySelector('form input[type="submit"]'),
+    button = document.querySelector('form input[name="submit"]'),
     confirmation = document.querySelector('#confirmation h2'),
     formSection = document.querySelector('#form');
 
-form.addEventListener('submit', submit);
-button.addEventListener('touchend', submit);
+// form.addEventListener('submit', submit);
+// button.addEventListener('touchend', submit);
+
+form.onsubmit = submit;
 
 function sortFormData(form) {
   var parsedForm = {},
