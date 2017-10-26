@@ -169,23 +169,17 @@ form textarea {
   border-radius: 0;
 }
 
+#nameContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .name {
-  width: 49.1%;
+  width: 49.4%;
   -webkit-border-radius: 0;
   border-radius: 0;
 }
 
-form input[name="firstName"]:before {
-  width: 100%;
-  display: block;
-  content: '';
-}
-
-form input[name="lastName"]:after {
-  display: inline-block;
-  width: 100%;
-  content: '';
-}
 
 form input[name="submit"] {
   width: 100%;
@@ -218,11 +212,11 @@ form input[name="submit"] {
 }
 
 .slide .left {
-  padding: 0px 100px 0px 250px;
+  padding: 0px 175px 0px 250px;
 }
 
 .slide .right {
-  padding: 0px 250px 0px 100px;
+  padding: 0px 250px 0px 175px;
 }
 
 
@@ -236,6 +230,8 @@ form input[name="submit"] {
 
 .slideNavigator {
   position: absolute;
+  margin: 0;
+  padding: 0;
   font-size: 40px;
   height: 65px;
   width: 40px;
@@ -297,11 +293,11 @@ form input[name="submit"] {
 
 @media only screen and (max-width: 1415px) {
   .slide .left {
-    padding: 0px 35px 0px 125px;
+    padding: 0px 35px 0px 175px;
   }
 
   .slide .right {
-    padding: 0px 125px 0px 35px;
+    padding: 0px 175px 0px 35px;
   }
 }
 
@@ -411,7 +407,7 @@ form input[name="submit"] {
 
   .slide .right {
     padding: 0;
-    width: 55%;
+    width: 65%;
   }
 
   #graph {
@@ -450,6 +446,7 @@ form input[name="submit"] {
 
   #codingDescription {
     order: 2;
+    width:75%;
   }
 
   #codingDescription > button {
@@ -462,12 +459,21 @@ form input[name="submit"] {
     width: 60%;
   }
 
+  #previous {
+    left: 2%;
+  }
+
+  #next {
+    right: 2%;
+  }
+
+
 }
 
 
 @media screen and (max-width: 541px) {
   .name {
-    width: 100%;
+    width: 49%;
   }
 }
 
@@ -501,7 +507,7 @@ form input[name="submit"] {
 
 @media screen and (max-width: 367px) {
   .name {
-    width:100%;
+    width:48.5%;
   }
 
 }  
